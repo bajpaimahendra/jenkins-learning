@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM') {
+            steps {
+                echo 'scm ..................'
+                echo "$PATH"
+            }
+        }
+        
+        stage('workspace') {
+            steps {
+                echo 'build ..............'
+                echo "$WORKSPACE"
+            }
+        }  
+        
+        stage('create-file') {
+            agent { label 'mymachinenode' }
+            steps {
+                echo 'build ..............'
+                sh '''
+                ls -l
+                '''
+                
+                // sh '''
+                //     touch file1 file2
+                //     sleep 30
+                // '''
+            }
+        }        
+        
+    }
+}
