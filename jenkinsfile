@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                echo 'scm ..................'
+                echo 'scm ..................1111111111111'
                 echo "$PATH"
             }
         }
