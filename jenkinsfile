@@ -8,6 +8,15 @@ pipeline {
                 echo "$PATH"
             }
         }
+
+        stage('Parameter') {
+            steps {
+                echo 'Parameter ..............'
+                //echo "$WORKSPACE"
+                echo "branch ======= ${params.branchName}"
+
+            }
+        }
         
         stage('workspace') {
             steps {
