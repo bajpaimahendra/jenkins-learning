@@ -26,7 +26,7 @@ pipeline {
             }
         }
 
-    stages {
+
         stage('Print job') {
             steps {
                 echo "You selected job: ${params.JOB_LIST}"
